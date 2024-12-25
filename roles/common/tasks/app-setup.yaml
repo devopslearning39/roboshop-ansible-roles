@@ -12,7 +12,7 @@
     url: "https://roboshop-builds.s3.amazonaws.com/{{component}}.zip"
     dest: /tmp
 
-- name: "Unarchive/unzipping "{{component}}" file that is already on the remote machine"
+- name: "Unarchive/unzipping {{component}} file that is already on the remote machine"
   ansible.builtin.unarchive:
     src: "/tmp/{{component}}.zip"
     dest: /app
