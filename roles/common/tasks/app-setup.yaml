@@ -1,0 +1,19 @@
+- name: Adding roboshop user
+  ansible.builtin.user:
+    name: roboshop
+
+- name: Create a directory if does not exist
+  ansible.builtin.file:
+    name: /app
+    state: directory
+
+- name: "Download the {{component}} application code"
+  ansible.builtin.get_url:
+    url: "https://roboshop-builds.s3.amazonaws.com/{{component}}.zip"
+    dest: /tmp
+
+- name: "Unarchive/unzipping "{{component}}" file that is already on the remote machine"
+  ansible.builtin.unarchive:
+    src: "/tmp/{{component}}.zip"
+    dest: /app
+    remote_src: yes

@@ -1,0 +1,17 @@
+- name: Removing old node version
+  ansible.builtin.dnf:
+    name: nodejs
+    state: absent
+      
+- name: Enabling nodejs-18 version 
+  ansible.builtin.shell: dnf module enable nodejs:18 -y
+
+- name: Installing nodejs
+  ansible.builtin.package:
+    name: nodejs
+    state: present
+
+- name: Change the working directory and run npm install
+  ansible.builtin.command: npm install
+  args:
+    chdir: /app

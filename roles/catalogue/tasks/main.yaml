@@ -1,0 +1,4 @@
+- name: Installing nodejs18 and installing dependencies
+  import_role:
+    name: common
+    tasks_from: nodejs
