@@ -1,12 +1,12 @@
-- name: Installing nodejs18 and installing dependencies
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: nodejs
-
 - name: Creating roboshop user, download and extracting catalogue app
   ansible.builtin.import_role:
     name: common
     tasks_from: app-setup
+
+- name: Installing nodejs18 and installing dependencies
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
 
 - name: mongodb setup
   ansible.builtin.import_role:
