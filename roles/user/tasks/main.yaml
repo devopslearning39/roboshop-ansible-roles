@@ -1,10 +1,10 @@
 - name: app-setup
-  import_role:
+  ansible.builtin.import_role:
     name: common
     tasks_from: app-setup
 
 - name: nodejs
-  import_role:
+  ansible.builtin.import_role:
     name: common
     tasks_from: nodejs
 
