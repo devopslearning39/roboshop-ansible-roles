@@ -1,0 +1,10 @@
+MONGODB_HOST: mongodb.jella.fun # submit your host
+REDIS_HOST: redis.jella.fun
+MYSQL_HOST: mysql.jella.fun
+RABBITMQ_HOST: rabbitmq.jella.fun
+CATALOGUE_HOST: catalogue.jella.fun
+USER_HOST: user.jella.fun
+CART_HOST: cart.jella.fun
+SHIPPING_HOST: shipping.jella.fun
+PAYMENT_HOST: payment.jella.fun
+DISPATCH_HOST: dispatch.jella.fun
